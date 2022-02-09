@@ -1,1 +1,1 @@
-# GenerativeWeb.io
+# a-generative-web.io
