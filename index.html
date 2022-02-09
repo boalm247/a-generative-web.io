@@ -2,194 +2,153 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Home Page</title>
+    <title>Weekly Posts</title>
     <style>
-      body {
-        background-color: #ffffff;
-        
-      }
+        body {
+            background-color: #FBACBE;
+            /* background-image: linear-gradient(#FBACBE, #B1DDF1); */
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+            margin: 50px;
+            cursor: crosshair;
+            }
 
-      h1{
-        color: #666666;
-        margin-left: 10px;
-        margin-top: 80px;
-        width: 278px;
-        padding: 0px;
-        border-bottom: medium solid #666666;
-        font-family: 'Courier New', Courier, monospace;
+        .grid-container {
+        display: grid;
+        grid-gap: 30px 60px;
+        grid-template-columns: auto auto auto;
+        align-self: auto;
+        /* background-color: #0C7489; */
+        padding: 20px;
+        margin-top: 30px;
+        margin-left: 0px;
+            }
+
+        .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1.5px solid rgb(0, 0, 0); 
+        /* padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 70px; */
+        padding-bottom: 70px;
         font-size: 20px;
-        line-height: 16px;
-      }
+        inline-size: 500px;
+        overflow: wrap;
+            }
 
-      p {
-        padding: 0px;
-        text-align: right;
-      }
-
-      #avatar{
-        width: 20%;
-        position: relative;
-        margin-top: auto;
-        margin-left: 10px;
-        /* display: inline; */
-        margin-left: 10px;
-        border-radius: 50%;
-        z-index: 20;
-        
-      }
-
-      /* li {
-        display: inline;
-      } */
-/* 
-      h2{
-        color: #529ecc;
-        background-color: #ebf8ff;
-        width: 195px;
-        display: block;
-        margin-left: 10px;
-        margin-right: auto;
-        text-align: center; 
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 10px;
-      } */
-
-      
-          .dropbtn {
-            background-color: #ebf8ff;
-            color: #529ecc;
-            width: 273px;
-            margin-left: 10px;
-            padding: 0px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
-            border: none;
-          }
-
-          .dropdown {
-            position: relative;
-            display: inline-block;
-          }
-
-          .dropdown-content {
-            display: none;
+        #metadata{
             position: absolute;
-            background-color: #ebf8ff;
-            min-width: 245px;
-            padding: 10px 14px;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            text-align: center; 
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
-            z-index: 1;
-          }
+            margin: 5px;
+            text-align: left;
+            /* border-bottom: 1.5px solid rgb(0, 0, 0); */
+        }
 
-          .dropdown-content a {
-            color: #529ecc;
-            text-decoration: none;
-            display: block;
-            padding: 5px;
-          }
-
-          .dropdown-content a:hover {background-color: #ddd;}
-
-          .dropdown:hover .dropdown-content {display: block;}
-    
-          #mushroom { 
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 70px;
-             
-            }
-
-          /* .row {
-            display: -ms-flexbox; 
-            display: flex;
-            -ms-flex-wrap: wrap; 
-            flex-wrap: wrap;
-            padding: 0 4px;
-            } */
-
-            /* Create two equal columns that sits next to each other */
-          /*.column {
-            -ms-flex: 50%; 
-            flex: 50%;
-            padding: 0 4px;
-            }
-
-          .column img {
-            margin-top: 8px;
-            vertical-align: middle;
-            } */
+        .content{
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 70px;
+            text-align: left;
+        }
         
-
-      }
     </style>
   </head>
+  <body>
+      <h1 style="font-weight:bolder;">Generative Web: Weekly Posts</h1>
 
+        <hr>
 
-    <body>
-
-          <h1>
-            <img id="avatar" src="graphics/avatar.jpg" class="center;" />
-            <p>morgan</p>
-          </h1>
-
-        <div class="dropdown">
-          <button class="dropbtn">links</button>
-          <!-- <button class="dropbtn">Dropdown</button> -->
-          <div class="dropdown-content">
-            <a href="#">home</a>
-            <a href="#">inspiration</a>
-            <a href="#">my art</a>
-            <a href="#">self-portraits</a>
-          </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div id="metadata">
+                2.2.22
+            </div>
+            <div class="content">
+            <p>This week we created index.html pages with an image of our work. I referenced the my old tumblr page for the design, 
+                bc it was my first introduction to basic html. I still want to address some of the issues I had with positioning on this site.</p>
+            <!-- <iframe src="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html" height="200" width="300" title="index.html"></iframe> -->
+            <a href="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html" target="_blank">index.html</a>
+            </div>
         </div>
-
-        
-         <img id="mushroom" src="graphics/mushroomMRI.gif" alt="Mushroom MRI gif" style="width: 30%;" class="center;"/>
-        
-
-
-      <!-- Photo Grid -->
-      <!-- <div class="row">
-        <div class="column">
-           
-            <img src="graphics/mushroomMRI.gif" alt="Mushroom MRI gif" style="width: 30%" />
+        <div class="grid-item">
+            <div id="metadata">
+                2.9.22
+            </div>
+            <div class="content">
+                <p>Last week we learned about the history of the internet and looked at early website design,
+                   which used basic html features. This type of design is called brutalist design.</p>
+                   <p> reference:
+                   </p>
+                <a href="https://www.webdesignmuseum.org/" target="_blank">web design museum</a>
+            </div>
         </div>
-        <div class="column">
-          <img src="/w3images/underwater.jpg" style="width:100%">
-          <img src="/w3images/ocean.jpg" style="width:100%">
-          <img src="/w3images/wedding.jpg" style="width:100%">
-          <img src="/w3images/mountainskies.jpg" style="width:100%">
-          <img src="/w3images/rocks.jpg" style="width:100%">
-          <img src="/w3images/underwater.jpg" style="width:100%">
+        <!-- <div class="grid-item">
+            <div class="content">
+                3
+            </div>3
         </div>
-        <div class="column">
-          <img src="/w3images/wedding.jpg" style="width:100%">
-          <img src="/w3images/rocks.jpg" style="width:100%">
-          <img src="/w3images/falls2.jpg" style="width:100%">
-          <img src="/w3images/paris.jpg" style="width:100%">
-          <img src="/w3images/nature.jpg" style="width:100%">
-          <img src="/w3images/mist.jpg" style="width:100%">
-          <img src="/w3images/paris.jpg" style="width:100%">
+        <div class="grid-item">
+            <div class="content">
+                4
+            </div>3
         </div>
-        <div class="column">
-          <img src="/w3images/underwater.jpg" style="width:100%">
-          <img src="/w3images/ocean.jpg" style="width:100%">
-          <img src="/w3images/wedding.jpg" style="width:100%">
-          <img src="/w3images/mountainskies.jpg" style="width:100%">
-          <img src="/w3images/rocks.jpg" style="width:100%">
-          <img src="/w3images/underwater.jpg" style="width:100%">
+        <div class="grid-item">
+            <div class="content">
+                5
+            </div>3
         </div>
-      </div> -->
+        <div class="grid-item">
+            <div class="content">
+                6
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                7
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                8
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                9
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                10
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                11
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                12
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                13
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                14
+            </div>3
+        </div>
+        <div class="grid-item">
+            <div class="content">
+                15
+            </div>3
+        </div> -->
+
+    </div>
 
 
-
-   
-    </video>
   </body>
 </html>
