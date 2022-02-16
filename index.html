@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Weekly Posts</title>
     <style>
@@ -9,53 +10,66 @@
             /* background-image: linear-gradient(#FBACBE, #B1DDF1); */
             font-family: 'Courier New', Courier, monospace;
             font-weight: lighter;
-            margin: 50px;
+            margin-top: 50px;
             cursor: crosshair;
-            }
+        }
 
         .grid-container {
-        display: grid;
-        grid-gap: 30px 60px;
-        grid-template-columns: auto auto auto;
-        align-self: auto;
-        /* background-color: #0C7489; */
-        padding: 20px;
-        margin-top: 30px;
-        margin-left: 0px;
-            }
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            /* grid-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr); */
+            /* grid-gap: 30 60px;
+        grid-template-columns: auto auto auto; */
+            /* align-self: auto; */
+            /* background-color: #0C7489; */
+            /* padding: 20px; */
+            margin-top: 30px;
+            margin-left: 0px;
+            max-width: 100%;
+            overflow: wrap;
+        }
 
         .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1.5px solid rgb(0, 0, 0); 
-        /* padding-left: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1.5px solid rgb(0, 0, 0);
+            position: relative;
+            /* padding-left: 50px;
         padding-right: 50px;
         padding-top: 70px; */
-        padding-bottom: 70px;
-        font-size: 20px;
-        inline-size: 500px;
-        overflow: wrap;
-            }
+            padding-bottom: 70px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            inline-size: 500px;
+            /* max-width: 100%; */
+            width: 500px;
+            /* width: calc(100vw/3 - 30px*2 - 100px); */
+            /* overflow: wrap; */
+        }
 
-        #metadata{
-            position: absolute;
+        #metadata {
             margin: 5px;
             text-align: left;
             /* border-bottom: 1.5px solid rgb(0, 0, 0); */
         }
 
-        .content{
+        .content {
             padding-left: 50px;
             padding-right: 50px;
             padding-top: 70px;
             text-align: left;
+            position: relative;
         }
-        
     </style>
-  </head>
-  <body>
-      <h1 style="font-weight:bolder;">Generative Web: Weekly Posts</h1>
+</head>
 
-        <hr>
+<body>
+    <h1 style="font-weight:bolder;">Generative Web: Weekly Posts</h1>
+
+    <hr>
 
     <div class="grid-container">
         <div class="grid-item">
@@ -63,10 +77,13 @@
                 2.2.22
             </div>
             <div class="content">
-            <p>This week we created index.html pages with an image of our work. I referenced the my old tumblr page for the design, 
-                bc it was my first introduction to basic html. I still want to address some of the issues I had with positioning on this site.</p>
-            <!-- <iframe src="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html" height="200" width="300" title="index.html"></iframe> -->
-            <a href="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html" target="_blank">index.html</a>
+                <p>This week we created index.html pages with an image of our work. I referenced the my old tumblr page
+                    for the design,
+                    bc it was my first introduction to basic html. I still want to address some of the issues I had with
+                    positioning on this site.</p>
+                <!-- <iframe src="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html" height="200" width="300" title="index.html"></iframe> -->
+                <a href="file:///Users/morganboals/Documents/Parsons/Generative%20Web/index.html"
+                    target="_blank">index.html</a>
             </div>
         </div>
         <div class="grid-item">
@@ -75,18 +92,29 @@
             </div>
             <div class="content">
                 <p>Last week we learned about the history of the internet and looked at early website design,
-                   which used basic html features. This type of design is called brutalist design.</p>
-                   <p> reference:
-                   </p>
+                    which used basic html features. This type of design is called brutalist design.</p>
+                <p> reference:
+                </p>
                 <a href="https://www.webdesignmuseum.org/" target="_blank">web design museum</a>
             </div>
         </div>
-        <!-- <div class="grid-item">
-            <div class="content">
-                3
-            </div>3
-        </div>
         <div class="grid-item">
+            <div id="metadata">
+                2.16.22
+            </div>
+            <div class="content">
+                <p>
+                    The Jodi reading discussed how designers view their work in regards to a digital platform; whether
+                    they see themselves as working 'on' or 'within' the digital.
+                    My initial raction is that I work 'within' the digital. I percieve space quite differently on a
+                    computer than real life, although they are not mutually exclusive.
+                    The only time I am consciously aware of the interaction between digital and real is when I watch
+                    someone else interact with it. When I myself use digital platforms
+                    I feel transported to another world.
+                </p>
+            </div>
+        </div>
+        <!--<div class="grid-item">
             <div class="content">
                 4
             </div>3
@@ -150,5 +178,6 @@
     </div>
 
 
-  </body>
+</body>
+
 </html>
