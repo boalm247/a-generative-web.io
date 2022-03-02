@@ -15,21 +15,20 @@
             height: 200px;
             width: 400px;
             border-radius: 2%;
-            background-image: linear-gradient(pink, lightblue);
+            /* background-image: linear-gradient(pink, lightblue); */
             animation-name: sky;
-            animation-duration: 15s;
+            animation-duration: 5s;
             animation-iteration-count: infinite;
-            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-direction: alternate;
         }
 
         @keyframes sky {
-            0% {background-image: linear-gradient(#020e66,#13043d);}
-            15% {background-image: linear-gradient(#020e66, #85afff);}
-            30% {background-image: linear-gradient(#85afff,#ffadec);}
-            45% {background-image: linear-gradient(#5294ff,#85afff);}
-            60% {background-image: linear-gradient(#85afff,#ffadec);}
-            85% {background-image: linear-gradient(#020e66, #85afff);}
-            100% {background-image: linear-gradient(#020e66,#13043d);}
+            0% {background-image: linear-gradient(#080a3f,#020e66);}
+            25% {background-image: linear-gradient(#020e66,#373bb5);}
+            50% {background-image: linear-gradient(#373bb5, #85afff);}
+            75% {background-image: linear-gradient(#85afff,#ffadec);}
+            100% {background-image: linear-gradient(#0253d7,#85afff);}
         }
 
 
