@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock window</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .window{
+            display: block;
+            margin: auto;
+            margin-top: 250px;
+            height: 200px;
+            width: 400px;
+            border-radius: 2%;
+            background-image: linear-gradient(pink, lightblue);
+            animation-name: sky;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        @keyframes sky {
+            0% {background-image: linear-gradient(#020e66,#13043d);}
+            15% {background-image: linear-gradient(#020e66, #85afff);}
+            30% {background-image: linear-gradient(#85afff,#ffadec);}
+            45% {background-image: linear-gradient(#5294ff,#85afff);}
+            60% {background-image: linear-gradient(#85afff,#ffadec);}
+            85% {background-image: linear-gradient(#020e66, #85afff);}
+            100% {background-image: linear-gradient(#020e66,#13043d);}
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- <h2>the time is:</h2>
+<div id="clock">00:00:00</div> -->
+<!-- <button onclick="changeTimex()">get time</button> -->
+
+<div class="window">
+
+</div>
+
+<script src="clock.js"></script>
+</body>
+</html>
