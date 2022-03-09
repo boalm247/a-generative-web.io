@@ -4,45 +4,130 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clock window</title>
+    
     <style>
         body{
             background-color: white;
         }
+
+        #clock{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #f5eada;
+            align-self: center;
+
+
+        }
+
         .window{
             display: block;
+            position: relative;
             margin: auto;
-            margin-top: 250px;
-            height: 200px;
-            width: 400px;
-            border-radius: 2%;
+            margin-top: 6rem;
+            height: 500px;
+            width: 800px;
+            border-radius: 50%;
             /* background-image: linear-gradient(pink, lightblue); */
-            animation-name: sky;
-            animation-duration: 5s;
+            /* animation-name: sky; */
+            animation-timing-function: ease;
+            animation-duration: 50s;
             animation-iteration-count: infinite;
             /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
             animation-direction: alternate;
         }
 
-        @keyframes sky {
+        .layer1{
+            position: absolute;
+            height: 420px;
+            width: 720px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 10%;
+            top: 50%;
+            left: 50%;
+            margin: -210px 0px 0px -360px;
+
+
+        }
+
+        .layer2{
+            position: absolute;
+            height: 340px;
+            width: 640px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 20%;
+            top: 50%;
+            left: 50%;
+            margin: -170px 0px 0px -320px;
+
+
+        }
+
+        .layer3{
+            position: absolute;
+            height: 260px;
+            width: 560px;
+            margin: auto;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 30%;
+            top: 50%;
+            left: 50%;
+            margin: -130px 0px 0px -280px;
+
+
+        }
+
+        @keyframes sky1 {
             0% {background-image: linear-gradient(#080a3f,#020e66);}
+            100% {background-image: linear-gradient(#020e66,#373bb5);}
+        }
+
+        @keyframes sky2 {
+            0% {background-image: linear-gradient(#020e66,#373bb5);}
+            100% {background-image: linear-gradient(#373bb5, #85afff);}
+        }
+
+        @keyframes sky3 {
+            0% {background-image: linear-gradient(#373bb5, #85afff);}
+            100% {background-image: linear-gradient(#85afff,#ffadec);}
+        }
+
+        @keyframes sky4 {
+            0% {background-image: linear-gradient(#0253d7,#85afff);}
+            100% {background-image: linear-gradient(#0253d7,#85afff);}
+        }
+
+        /* @keyframes sky5 {
+            0% {background-image: linear-gradient(#373bb5, #85afff);}
+            100% {background-image: linear-gradient(#85afff,#ffadec);}
+        } */
+
+
+
+            /* 0% {background-image: linear-gradient(#080a3f,#020e66);}
             25% {background-image: linear-gradient(#020e66,#373bb5);}
             50% {background-image: linear-gradient(#373bb5, #85afff);}
             75% {background-image: linear-gradient(#85afff,#ffadec);}
-            100% {background-image: linear-gradient(#0253d7,#85afff);}
-        }
+            100% {background-image: linear-gradient(#0253d7,#85afff);} */
 
 
     </style>
 </head>
 <body>
-<!-- <h2>the time is:</h2>
-<div id="clock">00:00:00</div> -->
-<!-- <button onclick="changeTimex()">get time</button> -->
+<!-- <h2>the time is:</h2> -->
+<p id="clock">00:00:00</p>
+
+
 
 <div class="window">
-
+    <div class="layer1"></div>
+    <div class="layer2"></div>
+    <div class="layer3"></div>
 </div>
-
 <script src="clock.js"></script>
 </body>
 </html>
