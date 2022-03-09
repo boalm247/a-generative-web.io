@@ -27,13 +27,26 @@ function changeTimex() {
     } else if (hoursx >= 4 && hoursx < 6) {
         document.querySelector('.window').style.animationName = 'sky2';
 
-    } else if (hoursx >= 6 && hoursx < 8) {
+    } else if (hoursx >= 6 && hoursx < 9) {
         document.querySelector('.window')
         .style.animationName = 'sky3';
 
-    } else if (hoursx >= 8 && hoursx < 12) {
+    } else if (hoursx >= 9 && hoursx < 16) {
         document.querySelector('.window')
             .style.animationName = 'sky4';
+
+    } else if (hoursx >= 16 && hoursx < 18) {
+    document.querySelector('.window')
+        .style.animationName = 'sky5';
+
+    } else if (hoursx >= 18 && hoursx < 20) {
+    document.querySelector('.window')
+        .style.animationName = 'sky6';
+
+    } else if (hoursx >= 20 && hoursx < 24) {
+    document.querySelector('.window')
+        .style.animationName = 'sky7';
+
     }
 
 
