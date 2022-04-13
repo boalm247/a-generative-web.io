@@ -1,6 +1,6 @@
 function setup() {
     let w = window.innerWidth;
-    let h = window.innerHeight + 700;
+    let h = window.innerHeight + 500;
     createCanvas(w, h);
     noLoop();
     noStroke();
@@ -39,13 +39,14 @@ function draw() {
                 fill(0, 0, 0);
                 //define stroke
             }
+            console.log(`Top grid has ` + rect.length);
 
         }
     }
 
     //this is the side vertical grid (treadling)
     for (let y = 0; y < gridheightb; y++) {
-        for (let x = 0; x < gridwidtha; x++) {
+        for (let x = 0; x < gridwidthb; x++) {
             rect(x * margin + oMargin + 1100, y * margin + oMargin + 175, size, size);
             if (Math.random() > .25) {
                 fill(217, 217, 217);
@@ -59,7 +60,7 @@ function draw() {
     for (let y = 0; y < gridwidtha; y++){
         for (let x = 0; x < gridwidthb; x++){
             rect(x * margin + oMargin + 1100, y * margin + oMargin, size, size);
-            if (Math.random() > .3){
+            if (Math.random() > .25){
                 fill(217, 217, 217);
 
             }else {
