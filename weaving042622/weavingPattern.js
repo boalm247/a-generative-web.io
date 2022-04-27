@@ -12,11 +12,15 @@ function setup() {
     createCanvas(w, h);
     noLoop();
     noStroke();
+
     
+
     topSquares.push();
     rightSquares.push();
     tieUp.push();
     pattern.push();
+    
+    
 }
 
 
@@ -26,16 +30,19 @@ function draw() {
     background(220, 216, 220);
     fill(255);
 
+
+    
+
     //size of cell
     var size = 25
     // distance between squares
     var margin = 40;
     //distance outside sqaures
-    var xMargin = 100;
+    var xMargin = 210;
     var yMargin = 60;
     //grid width and height outside sqaures
     var gridwidth = 4;
-    var gridheighta = 24;
+    var gridheighta = 20;
     var gridheightb = 20;
 
 
@@ -50,45 +57,86 @@ function draw() {
     // create pattern from random (randomize the repeat every 4-15 for threadling [divisible by 120] and every 4 for treadling)
 
     //this is the top horizontal grid (threading)
-    for (let y = 0; y < gridwidth; y++) {
+    for (let x = 0; x < gridheighta; x++) {
+        for (let y = 0; y < gridwidth; y++) {
 
-        for (let x = 0; x < gridheighta; x++) {
+        
+            //if ( x% 4 === 0){
+
             var randomX = Math.floor(Math.floor(Math.random() * 4));
-            console.log(randomX);
+            //console.log(randomX);
+            
+            //for (let z=0; z<4; z++){
+                //console.log(z, randomX, x);
 
-            topSquares.push();
+                rect(x * margin + xMargin, y * margin + yMargin, size, size);
+
+                // if (y == randomX) {
+                //     fill(0, 0, 0);
+
+                // }
+                // else {
+                // fill(255);
+                // }
+                // if (z === randomX){
+                //     fill (0);
+                //     //console.log(z,randomX,x);
+                // }else {
+                //     fill (255);
+                // }
+
+                for (let y = randomX; y < 4; y +=4){
+                if (y === randomX) {
+                    fill(0, 0, 0);
+
+                }
+                else {
+                    fill(255);
+                }
+            }
+
+            }
+            //     for (let y = randomX; y < 4; y += 4) {
+
+            
+            // }
+
+
+            //}
+
+            //topSquares.push();
             //console.log(topSquares.length);
-            rect(x * margin + xMargin, y * margin + yMargin, size, size);
 
             // let threadingPattern = Array(gridheighta).fill(0)
             //     .map((z,i)=> ((i < (gridheighta/4) || ((i>= gridheighta*2/4)) && i < (gridheighta*3/4)))
             //                     ? i
             //                     : (gridheighta+gridwidth/2-1-i) % gridwidth);
 
+            //console.log(randomX, x);
+
+            //for (let y = randomX; y < 4; y +=4){
+                // if (y == randomX) {
+                //     fill(0, 0, 0);
+
+                // }
+                // else {
+                //     fill(255);
+                // }
+            //}
             
-            if (top.Squares[i]) {
-                fill(0, 0, 0);
 
-            }
-            else {
-                fill(255);
-
-                //define stroke
-            }
-            
-
-        }
+        
     }
     
 
     //this is the side vertical grid (treadling)
-    for (let y = 0; y < gridheightb; y++) {
-        for (let x = 0; x < gridwidth; x++) {
+    for (let x = 0; x < gridwidth; x++) {
+        for (let y = 0; y < gridheightb; y++) {
+        
+            var randomR = 0;
+            randomR = Math.floor(Math.floor(Math.random() * 4));
 
-            var randomR = 1;
-            randomR = Math.floor(Math.floor(Math.random() * 3));
-
-            rect(x * margin + xMargin + 980, y * margin + yMargin + 175, size, size);
+            rect(x * margin + xMargin + 815, y * margin + yMargin + 175, size, size);
             rightSquares.push();
 
             if (x == randomR){
@@ -98,9 +146,6 @@ function draw() {
                 fill (255);
             }
 
-                
-
-
 
         }
     }
@@ -109,16 +154,28 @@ function draw() {
 
 
     //this is the small top box (tie up)
-    for (let y = 0; y < gridwidth; y++) {
-        for (let x = 0; x < gridwidth; x++) {
-            rect(x * margin + xMargin + 980, y * margin + yMargin, size, size);
-            tieUp.push();
+    tieUp = [[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]];
+
+
+    for (let x = 0; x < gridwidth; x++) {
+        for (let y = 0; y < gridwidth; y++) {
+            //console.log(x,y);
+            console.log(tieUp[x][y], x, y);
+            rect(x * margin + xMargin + 815, y * margin + yMargin, size, size);
+            //tieUp.push();
             //console.log(tieUp.length);
-            if (Math.random() > .25) {
-                fill(255);
+
+            //tieUp = [[0,0,0,1],[0,0,1,0],[0,1,0,0],[1,0,0,0]];
+            //let i = tieUp.indexOf();
+            //console.log(i);
+
+            if (tieUp[x][y] === 1) {
+                fill(0);
+                //console.log(tieUp[y][x], x, y);
+
 
             } else {
-                fill(0, 0, 0);
+                fill(255);
             }
             
 
@@ -126,8 +183,8 @@ function draw() {
     }
 
     //this is the large left box (weave pattern)
-    for (let y = 0; y < gridheightb; y++) {
-        for (let x = 0; x < gridheighta; x++) {
+    for (let x = 0; x < gridheighta; x++) {
+        for (let y = 0; y < gridheightb; y++) {
             pattern.push();
             //console.log(pattern.length);
             fill(255)
