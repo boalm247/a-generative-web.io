@@ -34,11 +34,11 @@ function draw() {
     
 
     //size of cell
-    var size = 25
+    var size = 45;
     // distance between squares
-    var margin = 40;
+    var margin = 50;
     //distance outside sqaures
-    var xMargin = 210;
+    var xMargin = 100;
     var yMargin = 60;
     //grid width and height outside sqaures
     var gridwidth = 4;
@@ -63,7 +63,7 @@ function draw() {
         
             //if ( x% 4 === 0){
 
-            var randomX = Math.floor(Math.floor(Math.random() * 4));
+            var randomX = Math.floor(Math.random() * 4);
             //console.log(randomX);
             
             //for (let z=0; z<4; z++){
@@ -85,14 +85,15 @@ function draw() {
                 //     fill (255);
                 // }
 
-                for (let y = randomX; y < 4; y +=4){
-                if (y === randomX) {
+                for (let x = randomX; x < 20; x +=4){
+                if (y === randomX && y!== 0) {
                     fill(0, 0, 0);
 
                 }
                 else {
                     fill(255);
                 }
+                //console.log(randomX, x, y);
             }
 
             }
@@ -136,10 +137,10 @@ function draw() {
             var randomR = 0;
             randomR = Math.floor(Math.floor(Math.random() * 4));
 
-            rect(x * margin + xMargin + 815, y * margin + yMargin + 175, size, size);
+            rect(x * margin + xMargin + 1010, y * margin + yMargin + 210, size, size);
             rightSquares.push();
 
-            if (x == randomR){
+            if (x === randomR){
                 fill(0);
             }
             else {
@@ -154,14 +155,14 @@ function draw() {
 
 
     //this is the small top box (tie up)
-    tieUp = [[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0]];
+    tieUp = [[0, 0, 1, 0], [0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 1, 0]];
 
 
     for (let x = 0; x < gridwidth; x++) {
         for (let y = 0; y < gridwidth; y++) {
             //console.log(x,y);
             console.log(tieUp[x][y], x, y);
-            rect(x * margin + xMargin + 815, y * margin + yMargin, size, size);
+            rect(x * margin + xMargin + 1010, y * margin + yMargin, size, size);
             //tieUp.push();
             //console.log(tieUp.length);
 
@@ -169,7 +170,7 @@ function draw() {
             //let i = tieUp.indexOf();
             //console.log(i);
 
-            if (tieUp[x][y] === 1) {
+            if (tieUp[y][x] === 1 && [y][x]!==0) {
                 fill(0);
                 //console.log(tieUp[y][x], x, y);
 
@@ -188,7 +189,7 @@ function draw() {
             pattern.push();
             //console.log(pattern.length);
             fill(255)
-            rect(x * margin + xMargin, y * margin + yMargin + 175, size, size);
+            rect(x * margin + xMargin, y * margin + yMargin + 210, size, size);
             
         }
 

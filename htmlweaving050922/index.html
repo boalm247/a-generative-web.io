@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaving Pattern Generator
+    </title>
+    <style type="text/css"> 
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin-top: 50px;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 2px;
+        margin-block-end: 10px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    hr{
+        margin: 40px;
+    }
+
+    .tryIt{
+        width: 100px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        position: relative;
+        float: right;
+        margin-top: -100px;
+        margin-right: 50px;
+    }
+
+    .tryIt a{
+        display: block;
+        margin-block-start: 16px;
+        margin-block-end: 10px;
+        margin-inline-start: 20px;
+        margin-inline-end: 0px;
+        color: white;
+        
+    }
+
+    .tryIt a:link{
+        text-decoration: none;
+    }
+
+    .tryIt a:visited{
+        text-decoration: none;
+    }
+
+    .tryIt:hover{
+        background-color: gray;
+        text-decoration: none;
+    }
+
+    .tryIt a:active{
+        text-decoration: none;
+    }
+
+    .about {
+        margin-left: 25vw;
+    }
+
+    .title{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 25px;
+      position: relative;
+      width: 80vw;
+      margin-left: 60px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      
+    }
+
+    .subtitle{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 12px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-left: 80px;
+
+    }
+
+    .text{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 22px;
+      position: relative;
+      width: 575px;
+      margin-left: 80px;
+      margin-top: 0px;
+      
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-top: 30px;
+        margin-left: 60px;
+        /* width: 40vw; */
+    }
+    
+
+    /* Create two equal columns that sits next to each other */
+    /* W3Schools Image grid */
+    .column {
+        flex: 15%;
+        padding: 0px;
+    }
+
+    .column img {
+        vertical-align: middle;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+
+    .fillBox{
+        width: 250px;
+        height: 250px;
+        background-color: grey;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+        
+    
+
+
+    </style>
+<body>
+    <div class="title">
+        <p>Reverse Jaquard Loom</p>
+        
+    </div>
+    <div class="subtitle">
+        <p>by Morgan Boals</p>
+    </div>
+    <div class="subtitle">
+        <p>Genterative Web - Parsons Spring 2022</p>
+
+    </div>
+
+    <div class="tryIt">
+        <a href="weaving.html">Try it</a>
+    </div>
+
+    <hr>
+    <div class="about">
+    <div class="title">
+        <p>About</p>
+    </div>
+    <div class="text">
+        <p>This project is an exploration between the connection of computer language and textile weaving. Early mechanical textile looms, specifically the Jaquard Loom, worked with interchangable punchcards, which later inspired the first computers. More often our interactions with computers dictate a desired output. This project reverses the role, by generating outputs dictated by the computer. </p>
+        <p>Anyone creating a weaving from the Weaving Pattern Generator will have all the parameters set for them by the computer. The patterns work best for the Schacht Loom. These looms are available in the Textile Lab at Parsons School of design.</p>
+    </div>
+    </div>
+    
+    <hr>
+    <div class="title">
+        Outputs
+    </div>
+
+
+    <!-- Output Grid -->
+    <div class="row">
+        <div class="column">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.29.17 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.33.07 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.34.27 AM.png">   
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.34.39 AM.png">  
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.34.56 AM.png">  
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.36.14 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.36.41 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.37.07 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.37.22 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.37.35 AM.png">
+            <!-- 10 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.37.47 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.38.16 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.38.29 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.38.40 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.38.54 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.40.06 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.40.37 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.41.12 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.41.26 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.42.10 AM.png">
+            <!-- 20 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.42.28 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 12.43.03 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.14.33 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.17.47 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.18.03 AM.png">
+        </div>
+
+        <div class="column">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.19.35 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.20.00 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.20.12 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.20.30 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.31.28 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.31.49 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.32.19 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.32.33 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.32.48 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.33.01 AM.png">
+            <!-- 10 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.33.16 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.33.29 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.33.41 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.33.57 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.34.10 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.34.23 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.34.36 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.34.52 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.35.05 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.35.39 AM.png">
+            <!-- 20 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.35.51 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.36.01 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.36.13 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.36.25 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.36.36 AM.png">
+        </div>
+
+        <div class="column">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.36.50 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.37.03 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.38.24 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.38.43 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.39.08 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.39.22 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.39.51 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.40.10 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.40.51 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.41.06 AM.png">
+            <!-- 10 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.41.24 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.45.48 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.46.03 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.46.15 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.46.26 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.46.39 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.46.51 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.47.23 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.47.46 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.47.59 AM.png">
+            <!-- 20 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.48.58 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.49.24 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.50.08 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.50.20 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.50.36 AM.png">
+        </div>
+
+        <div class="column">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.51.00 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.51.12 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.51.40 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.51.52 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.52.21 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.52.52 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.53.07 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.53.46 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.54.01 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.54.20 AM.png">
+            <!-- 10 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.54.34 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.54.46 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.55.05 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.55.20 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.55.32 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.55.46 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.55.56 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.56.06 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.56.17 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.56.29 AM.png">
+            <!-- 20 -->
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.56.48 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 9.56.59 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 10.31.56 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 10.32.14 AM.png">
+            <img src="../weaving-outputs/final100/Screen Shot 2022-05-11 at 10.32.29 AM.png">
+        </div>
+        
+    </div> 
+    <!-- end row -->
+    
+</body>
+
+<script>
+    
+</script>
+</html>

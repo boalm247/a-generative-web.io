@@ -1,0 +1,1178 @@
+<!-- Special thanks to Lauren Nishizaki for her weaving project: www.laurennishizaki.com -->
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Weaving Pattern</title>
+  <style>
+    
+    body {
+      /* background-color: gray; */
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .window{
+      width: 100vw;
+      height: 100vh;
+      margin-top: 60px;
+      margin-left: 0px;
+      margin-bottom: 200px;
+      display:flex;
+      flex-direction: row;
+
+    }
+
+    .button{
+        width: 100px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        position: absolute;
+        float: right;
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+
+    .button a{
+        display: block;
+        margin-block-start: 16px;
+        margin-block-end: 10px;
+        margin-inline-start: 28px;
+        margin-inline-end: 0px;
+        color: white;
+        
+    }
+
+    .button a:link{
+        text-decoration: none;
+    }
+
+    .button a:visited{
+        text-decoration: none;
+    }
+
+    .button:hover{
+        background-color: gray;
+        text-decoration: none;
+    }
+
+    .button a:active{
+        text-decoration: none;
+    }
+
+    .info{
+      width: 25vw;
+      height: 100vh;
+      flex: 40%;
+      flex-direction: column;
+      justify-content: start;
+      display: flex;
+      order: 2;
+      margin-left: 100px;
+      margin-top: 80px;
+
+    }
+
+    .title{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0px;
+      position: relative;
+      margin-top: 50px;
+      
+    }
+
+    .subtitle{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: -1px;
+      line-height: 15px;
+      position: relative;
+      display: flex;
+      margin-top: 30px;
+
+    }
+    
+    .metadata{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      letter-spacing: 0px;
+      line-height: 15px;
+      position: relative;
+      display: flex;
+      margin-top: 15px;
+      margin-left: 50px;
+
+    }
+
+    /* li{
+      display: inline-block;
+    } */
+
+    .weaving{
+      width: 30vw;
+      height: 60vh;
+      display: flex;
+      flex: 35%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 100px;
+      margin-left: 100px;
+      justify-content: start;
+      order: 1;
+
+
+    }
+
+    #warp{
+      position: relative;
+      order: 1;
+    }
+
+    .col {
+      display: inline;
+      float: left;
+    }
+
+    #tieUp{
+      position: relative;
+      order: 2;
+      padding-left: 15px;
+    }
+
+    .col2{
+      display: inline-block;
+      margin: 0px;
+      padding: 0px;
+      float: right;
+      position: relative;
+    }
+    
+    #pattern{
+      position: relative;
+      order: 3;
+      padding-top: 15px;
+      padding-right: 15px;
+      flex-direction: row;
+    
+    }
+
+    .rows2{
+      float: left;
+      display: inline-flex;
+    
+    }
+
+    #weft{
+      position: absolute;
+      order: 4;
+      padding-top: 15px;
+      width: 81px;
+      margin-top: 88px;
+      margin-left: 455px;
+    }
+
+    .row{
+      display: inline-flex;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      float: left;
+      
+    }
+
+    .cell{
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      margin: 0;
+      padding: 0;
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+<div class="window">
+
+  <div class="button">
+    <a href="index.html">Back</a>
+  </div>
+
+  <div class="info">
+
+  <div class="title">
+    <p>Random Weaving Pattern Generator</p>
+  </div>
+  
+
+  </a>
+
+  <div class="subtitle">
+    <p>Project Info:</p>
+    <br>
+  </div>
+  
+  <!-- <div class="metadata">
+    <p>Heddles required per harness:</p> -->
+    <!-- <li>1 ______</li>
+    <li>2 ______</li>
+    <li>3 ______</li>
+    <li>4 ______</li> -->
+    
+  <!-- </div> -->
+
+  <div class="metadata">
+    <p>Cloth:</p>
+  </div>
+  <div class="metadata">
+    <p>width: 10 in</p>
+  </div>
+  <div class="metadata">
+    <p>length: 6in </p>
+  </div>
+
+  <div class="metadata">
+    <p>EPI: 12 (120 total)</p>
+  </div>
+
+  <div class="metadata">
+    <p>Warp Length: 3 yards</p>
+    <p>(shrinkage + thrum)</p>
+  </div>
+
+  <div class="metadata">
+    <p>!! Click refesh for a new pattern</p>
+  </div>
+
+  </div>
+  <!-- end Info -->
+  
+  
+<div class="weaving">
+  <!---------------------------------------------------------------------------------------------------->
+  <!--WARP-->
+  <div id="warp">
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="col">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+  <!-- end warp -->
+
+  <!---------------------------------------------------------------------------------------------------->
+  <!--TIE UP-->
+  <div id="tieUp">
+  <div class="col2">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="col2">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="col2">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  <div class="col2">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+  </div>
+  <!-- end tieUp -->
+
+  <!---------------------------------------------------------------------------------------------------->
+  <!-- PATTERN -->
+  <div id="pattern">
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="rows2">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+  <!-- end pattern -->
+
+
+  <!---------------------------------------------------------------------------------------------------->
+  <!-- WEFT -->
+  <div id="weft">
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="row">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  
+  </div>
+  <!-- end weft -->
+
+
+  </div>
+  <!-- end weaving -->
+</div> 
+<!-- end Window -->
+</body>
+
+<script>
+
+  //get all colssss
+  var cols = document.getElementsByClassName('col');
+  var topFill = [];
+
+
+  for(i=0;i<cols.length;i++){
+   //get the cell in each col
+    var cells = cols[i].getElementsByClassName('cell');
+
+    //one random black fill
+    r = Math.floor(Math.random() * cells.length)
+    cells[r].style.backgroundColor = 'black';
+
+    
+    topFill.push(r);
+
+  
+  }
+  // TESTING
+  // console.log('top fill:' + topFill);
+
+  var tieUpPattern = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]];
+  var col2 = document.getElementsByClassName('col2');
+
+  for (i=0; i<col2.length; i++){
+
+    var cells = col2[i].getElementsByClassName('cell');
+
+    // cells[Math.floor(Math.random() * cells.length)].style.backgroundColor = 'black';
+
+    if (tieUpPattern[i] = 1) {
+      cells[i].style.backgroundColor = 'black';
+
+    } else{
+      cells[i].style.backgroundColor = 'white';
+    }
+
+  }
+
+
+  var row = document.getElementsByClassName('row');
+  var step =Math.floor(Math.random()*4)
+  var cend = Math.random();
+  var rightFill = [];
+
+  for (i = 0; i < row.length; i++) {
+      // cols[i]
+      //get the cell in each col
+      var cells = row[i].getElementsByClassName('cell');
+
+      //one random black fill
+      cells[step].style.backgroundColor = 'black';
+      if(cend > .5){
+        step -= 1
+        if (step <= 1) {
+          step = 3;
+        }
+
+      }
+      else {
+        //winner
+        step += 1;
+        if (step >= 4) {
+          step = 0;
+      
+       }
+    }
+    //else {
+    //     r = Math.floor(Math.random() * cells.length)
+    //     cells[r].style.backgroundColor = 'black'
+
+    // }
+
+      if (step === 0){
+        rightFill.push(4)
+      }
+      else{
+        rightFill.push(step);
+      }
+
+    // console.log('right fill:' + rightFill);
+
+    }
+
+    // PATTERN SECTION
+
+    function getPeddle(row) {
+      
+       return (rightFill[row]) 
+         
+        
+    
+      
+    }
+      
+
+    var rows2 = document.getElementsByClassName('rows2');
+    var patternFill = [];
+
+
+
+
+      for (let i = 0; i < rows2.length; i++){
+
+        var cells = rows2[i].getElementsByClassName('cell');
+
+        var newRow = 0;
+        var copyRow = getPeddle(i);
+        console.log('...');
+        console.log (newRow, copyRow);
+        
+
+        switch (copyRow){
+          case 1:
+            newRow = 3;
+            console.log('case 1');
+            break;
+
+          case 2:
+            newRow = 2;
+            console.log('case 2');
+
+            break;
+
+          case 3:
+            newRow = 1;
+            console.log('case 3');
+
+            break;
+
+          case 4:
+            newRow = 0;
+            console.log('case 4');
+
+            break;
+
+            default:
+              console.log('no case');
+              break;
+        }
+        
+        // console.log(newRow, copyRow);
+
+        copyRow = newRow;
+
+        
+
+
+
+
+        for (let r =0; r < rows2.length; r++){
+          if (topFill[r] === copyRow){
+            cells[r].style.backgroundColor = 'black';
+
+          }
+
+        }
+
+
+
+
+
+
+      
+    
+        //console.log(patternFill)
+
+      }
+
+
+  
+
+      
+
+
+
+</script>
+
+</html>
