@@ -9,7 +9,6 @@
             background-color: #FBACBE;
             /* background-image: linear-gradient(#FBACBE, #B1DDF1); */
             font-family: 'Courier New', Courier, monospace;
-            font-weight: lighter;
             margin-top: 50px;
             cursor: crosshair;
         }
@@ -18,14 +17,6 @@
             display: flex;
             flex-wrap: wrap;
             box-sizing: border-box;
-            /* grid-gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr); */
-            /* grid-gap: 30 60px;
-        grid-template-columns: auto auto auto; */
-            /* align-self: auto; */
-            /* background-color: #0C7489; */
-            /* padding: 20px; */
             margin-top: 30px;
             margin-left: 20px;
             max-width: 100%;
@@ -36,25 +27,23 @@
             background-color: rgba(255, 255, 255, 0.8);
             border: 1.5px solid rgb(0, 0, 0);
             position: relative;
-            /* padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 70px; */
             padding-bottom: 70px;
             margin-right: 30px;
             margin-bottom: 30px;
             font-size: 20px;
             inline-size: 500px;
-            /* max-width: 100%; */
             width: 430px;
             height: fit-content;
-            /* width: calc(100vw/3 - 30px*2 - 100px); */
-            /* overflow: wrap; */
+        }
+
+        .title{
+            font-size: 20px;
+            margin-left: 20px;
         }
 
         #metadata {
             margin: 5px;
             text-align: left;
-            /* border-bottom: 1.5px solid rgb(0, 0, 0); */
         }
 
         .content {
@@ -68,7 +57,7 @@
 </head>
 
 <body>
-    <h1 style="font-weight:bolder; margin-left: 20px;">Generative Web: Weekly Posts</h1>
+    <div class="title">Generative Web: Weekly Posts</div>
 
     <hr>
 
@@ -194,9 +183,11 @@
                 week 11
             </div>
             <div class="content">
-                Version 1 of random Weaving Pattern Generator: 
+                Version 1 of random weaving pattern generator: 
                 <br>
                 <a href="weaving040422/index.html" target="blank">4.6.22 version</a>
+                <br>
+                <p>I started with a simple grid in js that randomized which boxes had a balck fill with 45% chance.</p>
             </div>
         </div>
         <div class="grid-item">
@@ -205,31 +196,65 @@
                 week 12
             </div>
             <div class="content">
-                Version 2 of random Weaving Pattern Generator:
+                Version 2 of random weaving pattern generator:
                 <br>
                 <a href="weaving041122/index.html" target="blank">4.13.22 version</a>
+                <br>
+                <p>I was able to write the code to create the four grid sections of a weaving pattern. I randomized the fill on the right with 25% odds of a black fill. I realized I needed to create specific parameters for the black fills to create a useable weaving pattern.</p>
             </div>
         </div>
-        <!--<div class="grid-item">
+        <div class="grid-item">
+            <div id="metadata">
+                4.20.22 <br>
+                week 13
+            </div>
             <div class="content">
-                12
-            </div>3
+                <p>Latest version of my weaving pattern generator</p>
+                <br>
+                <a href="weaving041322/index.html" target="blank">4.20.22 version</a>
+                <br>
+                <p>Began to set up page design. Attempting to get control over coloring specific boxes black. Code is broken.</p>
+            </div>
         </div>
         <div class="grid-item">
+            <div id="metadata">
+                4.27.22 <br>
+                week 14
+            </div>
             <div class="content">
-                13
-            </div>3
+                <p>Latest version of my weaving pattern generator.</p>
+                <br>
+                <a href="weaving042622/index.html" target="blank">4.27.22 version</a>
+                <br>
+                <p>Switched from p5.js to a html based file.</p>
+            </div>
         </div>
         <div class="grid-item">
+            <div id="metadata">
+                5.4.22 <br>
+                week 15
+            </div>
             <div class="content">
-                14
-            </div>3
+                <p>Latest version of my weaving pattern generator</p>
+                <br>
+                <a href="htmlweaving042722/index.html" target="blank">5.4.22 html version</a>
+                <br>
+                <p>Boxes are now created as div elements in css. Able to control fill of boxes to one in each column/row of four.</p>
+            </div>
         </div>
         <div class="grid-item">
+            <div id="metadata">
+                5.11.22 <br>
+                week 16
+            </div>
             <div class="content">
-                15
-            </div>3
-        </div> -->
+                <p>Final version of my weaving pattern generator</p>
+                <br>
+                <a href="htmlweaving050922/index.html" target="blank">5.11.22 version</a>
+                <br>
+                <p>Final website for the weaving pattern generator. Includes 100 pattern outputs and four woven outputs I made by hand.</p>
+            </div>
+        </div>
 
     </div>
 

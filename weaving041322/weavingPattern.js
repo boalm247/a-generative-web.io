@@ -65,6 +65,7 @@ function draw() {
             //                     ? i
             //                     : (gridheighta+gridwidth/2-1-i) % gridwidth);
 
+            let i = 0;
             
             if (top.Squares[i]) {
                 fill(0, 0, 0);
